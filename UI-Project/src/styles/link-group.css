@@ -77,8 +77,9 @@ section.download-section {
   }
 
   .arrow {
-    width: 35px;
-    height: 28px;
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
     padding-block: calc((56px - 28px) / 2);
     padding-inline: calc((56px - 35px) / 2);
   }
