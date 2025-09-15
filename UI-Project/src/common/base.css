@@ -1,0 +1,11 @@
+/* 하이퍼링크 */
+@import '../common/a11y.css';
+
+:root {
+  --base-font-family: 'Pretendard Variable', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
