@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UT 기사 신규가입 폼</title>
     <link rel="icon" href="./favicon/apple-favicon.svg" />
-    <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
     <link rel="stylesheet" as="style" href="/src/common/index.css" />
   </head>
   <body>
@@ -37,9 +36,9 @@
         <div class="field password-field">
           <label for="password" class="sr-only">비밀번호</label>
           <div class="control">
-            <input id="password" name="password" type="password" placeholder="비밀번호" autocomplete="new-password" required aria-invalid="true" aria-describedby="password-error" />
+            <input id="password" name="password" type="password" placeholder="비밀번호" autocomplete="new-password" aria-live="polite" required aria-describedby="password-error" />
             <button type="button" class="btn-icon btn-clear" aria-label="비밀번호 지우기" aria-controls="password">
-              <img src="../images/cancel.svg" alt="내용 지우기" class="cancel" />
+              <img src="../images/cancel.svg" alt="" aria-hidden="true" class="cancel" />
             </button>
           </div>
           <p id="password-error" class="msg-error">비밀번호를 다시 입력해주세요.</p>
