@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* faq UI */
+.faq-group {
+  border-bottom: 1px solid var(--border__borderTransparent);
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+
+    &::marker {
+      content: '';
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-inline-start: auto;
+      background-image: url('../images/ico_more_blue.svg');
+      background-size: 100% auto;
+      background-position: top center;
+      background-position: top 0 center;
+      color: #0077cc;
+    }
+  }
+
+  &[open] summary {
+    &::after {
+      background-position: top 24px center;
+    }
+  }
+
+  .answer-box {
+    padding: 24px;
+    border-top: 1px solid var(--border__borderTransparent);
+    font-size: 16px;
+    line-height: 1.6;
+
+    ul,
+    ol {
+      padding-inline-start: 1.4em;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 4px;
+      border-bottom: 1px solid var(--contents__contentTertiary);
+    }
+  }
+}

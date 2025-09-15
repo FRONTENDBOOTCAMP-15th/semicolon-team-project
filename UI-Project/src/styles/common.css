@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* section UI */
+.inner {
+  max-inline-size: 1280px;
+  padding: 40px 24px;
+  margin-inline: auto;
+
+  @media (width > 850px) {
+    padding: 56px 32px;
+  }
+
+  @media (width > 1680px) {
+    padding: 64px;
+  }
+}
+
+.sec-ttl {
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.4;
+
+  @media (width > 850px) {
+    font-size: 28px;
+  }
+
+  @media (width > 1680px) {
+    font-size: 38px;
+  }
+}
+
+/* button UI */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: opacity 0.35s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &[class*='ico-']::before {
+    display: block;
+    content: '';
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 100% auto;
+    background-position: center center;
+  }
+  &.ico-download::before {
+    background-image: url(../images/ico_download_white.svg);
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--secondary);
+}

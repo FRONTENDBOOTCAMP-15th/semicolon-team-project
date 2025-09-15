@@ -1,8 +1,15 @@
+@charset "UTF-8";
+
 /* 하이퍼링크 */
 @import '../common/a11y.css';
 
 :root {
   --base-font-family: 'Pretendard Variable', sans-serif;
+}
+
+body {
+  font-family: 'Pretendard Variable', sans-serif;
+  color: var(--contents__contentPrimary);
 }
 
 a {
