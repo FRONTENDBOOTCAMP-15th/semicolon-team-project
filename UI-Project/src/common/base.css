@@ -8,8 +8,8 @@
 }
 
 body {
-  font-family: 'Pretendard Variable', sans-serif;
   color: var(--contents__contentPrimary);
+  font-family: 'Pretendard Variable', sans-serif;
 }
 
 a {

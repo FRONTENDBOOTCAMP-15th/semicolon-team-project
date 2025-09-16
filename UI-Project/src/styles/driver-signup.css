@@ -1,5 +1,4 @@
-@import '../common/reset.css';
-@import '../common/base.css';
+@charset "UTF-8";
 
 article.signup-article {
   display: grid;
