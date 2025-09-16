@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+* {
+  border: none;
+  appearance: none;
+  outline: none;
+}
+
 article.signup-article {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -42,12 +48,57 @@ article.signup-article {
         font-size: 1rem;
         line-height: 1.5;
         font-weight: 500;
+        border-bottom: 1px solid #a6a6a6;
       }
     }
+
+    /* 모든 인풋 기본 세팅 */
+
+    input {
+      background-color: #f5f5f5;
+      box-shadow: 0 0 0 1px #8989894d;
+      &:focus-visible {
+        box-shadow: 0 0 0 2px #000;
+        color: #000;
+        -webkit-text-fill-color: #000;
+      }
+    }
+
+    /* input:autofill:not(focus),
+    input:-webkit-autofill:not(focus) {
+      box-shadow: 0 0 0 1000px #04884833 inset;
+      -webkit-box-shadow: 0 0 0 1000px #04884833 inset;
+    } */
+
+    input[required]:valid:not(:focus) {
+      background-color: #04884833;
+      box-shadow: 0 0 0 2px #048848;
+      -webkit-text-fill-color: #000;
+      z-index: 10;
+    }
+
+    input:invalid:not(:placeholder-shown):not(:focus) {
+      background-color: #e1190033;
+      box-shadow: 0 0 0 2px #e11900;
+      -webkit-text-fill-color: #000;
+    }
+
+    p.msg-error {
+      font-size: 0.75rem;
+      padding-block: 6px;
+      color: #e11900;
+      display: none;
+    }
+
+    input:invalid:not(:placeholder-shown):not(:focus) + p.msg-error {
+      display: block;
+    }
+
     .input-field {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 1rem;
+      /* align-items: center; */
 
       > div {
         display: contents;
@@ -57,7 +108,7 @@ article.signup-article {
         padding: 0.75rem;
         font-size: 1rem;
         line-height: 1.6;
-        color: #6b6b6b;
+        /* color: #6b6b6b; */
       }
     }
     .email-field {
@@ -68,9 +119,9 @@ article.signup-article {
         font-size: 1rem;
         color: #000;
         line-height: 1.6;
-        background-color: #04884833;
-        box-shadow: 0 0 0 2px #048848;
-        -webkit-text-fill-color: #000;
+        /* background-color: #04884833;
+        box-shadow: 0 0 0 2px #048848; 
+        -webkit-text-fill-color: #000;*/
         border: none;
       }
     }
@@ -85,9 +136,9 @@ article.signup-article {
           font-size: 1rem;
           line-height: 1.6;
           border: none;
-          background-color: #e1190033;
+          /* background-color: #e1190033;
           box-shadow: 0 0 0 2px #e11900;
-          -webkit-text-fill-color: #000;
+          -webkit-text-fill-color: #000; */
         }
         .btn-clear {
           position: absolute;
@@ -99,12 +150,8 @@ article.signup-article {
           height: 24px;
           padding: 0;
           cursor: pointer;
+          display: none;
         }
-      }
-      .msg-error {
-        color: #e11900;
-        font-size: 0.75rem;
-        padding-block: 6px;
       }
     }
     .tel-field {
@@ -115,8 +162,6 @@ article.signup-article {
         font-size: 1rem;
         line-height: 1.6;
         border: none;
-        box-shadow: 0 0 0 1px #000;
-        color: #000;
       }
     }
 
@@ -128,10 +173,11 @@ article.signup-article {
         font-size: 1rem;
         line-height: 1.6;
         border: none;
-        box-shadow: 0 0 0 1px #000;
         font-weight: 700;
         color: #000;
         -webkit-text-fill-color: #000;
+        pointer-events: none;
+        box-shadow: 0 0 0 2px #b0b0b0;
       }
     }
     .terms-note {
