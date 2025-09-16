@@ -456,6 +456,10 @@
       }
     }
   }
+
+  .nav-mobile {
+    background-color: #0075ff;
+  }
 }
 
 @media (max-width: 850px) {
