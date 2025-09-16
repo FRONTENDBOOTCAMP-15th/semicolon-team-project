@@ -50,6 +50,7 @@
     display: block;
     content: '';
     flex-shrink: 0;
+    transform: translateY(-1%);
     width: 24px;
     height: 24px;
     background-size: 100% auto;
