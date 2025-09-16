@@ -1,26 +1,49 @@
+
+@media (max-width: 950px) {
+  .nav-desk {
+    display: none;
+  }
+}
+
+@media (min-width: 950px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 @charset "UTF-8";
 
+
 .nav-desk {
+  background-color: #0075ff;
+  align-items: center;
   .inner {
-    background-color: #0075ff;
     justify-content: space-between;
-    /* align-items: center; */
     /* justify-items: center; */
     padding: 25px 11%;
     display: flex;
-    min-width: 607px;
+    min-width: 95%;
+    height: 80px;
   }
 
   .logo-gnb {
+    width: 83%;
+    height: 100%;
     display: flex;
+    align-content: center;
   }
 
   .logo {
     width: 2.4375rem;
-    height: 2.4375rem;
+    height: 39px;
     margin-right: 25px;
-    align-content: center;
+    display: flex;
+    /* align-content: center; */
+    /* height: 100%; */
 
+    a {
+      display: inline-block;
+    }
     img {
       height: 100%;
       display: block;
@@ -29,24 +52,25 @@
 
   .gnb {
     align-content: center;
+    /* width: 50%; */
   }
 
   .gnb a {
     display: inline-flex;
     text-decoration: none;
     color: white;
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    padding: 0 8px;
 
     span {
-      margin-right: 4px;
+      margin: 4px;
     }
   }
 
   .lang-sign {
     display: flex;
     justify-content: flex-end;
-    /* flex-direction: column;s */
-
+    width: 30%;
     img {
       display: none;
     }
@@ -62,24 +86,31 @@
       display: inline-flex;
       position: absolute;
       left: -28px;
+      top: 10%;
     }
   }
 
   .sign {
-    width: 80px;
+    /* width: 80px; */
+    border-radius: 22px;
     background-color: white;
     align-content: center;
-    border-radius: 22px;
   }
 
-  .sign a {
+  .sign-a {
     display: flex;
     text-decoration: none;
     color: #0075ff;
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-weight: 500;
+    font-weight: 600;
+
+    span {
+      display: block;
+      color: #0075ff;
+      padding: 8px 12px;
+    }
   }
 }
 
@@ -111,16 +142,21 @@
   .gnb {
     align-content: center;
     display: none;
+
+    img {
+      height: 100%;
+    }
   }
 
   .gnb a {
     display: inline-flex;
     text-decoration: none;
     color: white;
+    margin: 4px;
     margin-right: 20px;
 
     span {
-      margin-right: 4px;
+      margin: 4px;
     }
   }
 
@@ -131,6 +167,12 @@
 
     img {
       width: 24px;
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
     }
   }
 
@@ -149,21 +191,27 @@
   }
 
   .sign {
-    width: 80px;
+    /* width: 80px; */
     background-color: white;
     align-content: center;
     border-radius: 22px;
     margin-right: 4px;
   }
 
-  .sign a {
+  .sign-a {
     display: flex;
     text-decoration: none;
     color: #0075ff;
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-weight: 500;
+    font-weight: 600;
+
+    span {
+      display: block;
+      color: #0075ff;
+      padding: 8px 12px;
+    }
   }
 }
 
@@ -191,18 +239,26 @@
       color: #0075ff;
       margin-top: 12px;
       margin-bottom: 12px;
+      font-weight: 600;
+      padding: 4px 0;
     }
 
     span {
+      padding: 4px 0;
       margin-bottom: 12px;
     }
 
     a {
-      display: block;
+      display: inline-block;
       color: #000000;
       margin-top: 12px;
       text-decoration: underline;
       text-underline-offset: 7px;
+      padding: 4px 4px 4px 0;
+
+      span {
+        font-weight: 600px;
+      }
     }
   }
 }
@@ -211,24 +267,24 @@
   background-color: #0075ff;
   padding: 64px;
   min-width: 1040px;
-}
 
-.container {
-  width: 63%;
-}
-
-.logo {
-  display: inline-flex;
-  flex-direction: column;
-  img {
-    width: 39px;
-    width: 39px;
-    margin-bottom: 28px;
+  .container {
+    width: 63%;
   }
 
-  span {
-    color: white;
-    margin-bottom: 64px;
+  .logo {
+    display: inline-flex;
+    flex-direction: column;
+    img {
+      width: 39px;
+      width: 39px;
+      margin-bottom: 28px;
+    }
+
+    span {
+      color: white;
+      margin-bottom: 64px;
+    }
   }
 }
 
