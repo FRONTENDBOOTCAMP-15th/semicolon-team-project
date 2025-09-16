@@ -1,16 +1,30 @@
+@media (max-width: 950px) {
+  .nav-desk {
+    display: none;
+  }
+}
+
+@media (min-width: 950px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
 .nav-desk {
   background-color: #0075ff;
+  align-items: center;
   .inner {
     justify-content: space-between;
-    /* align-items: center; */
     /* justify-items: center; */
     padding: 25px 11%;
     display: flex;
-    min-width: 607px;
-    height: 89px;
+    min-width: 95%;
+    height: 80px;
   }
 
   .logo-gnb {
+    width: 83%;
+    height: 100%;
     display: flex;
     align-content: center;
   }
@@ -20,7 +34,7 @@
     height: 39px;
     margin-right: 25px;
     display: flex;
-    align-content: center;
+    /* align-content: center; */
     /* height: 100%; */
 
     a {
@@ -34,13 +48,15 @@
 
   .gnb {
     align-content: center;
+    /* width: 50%; */
   }
 
   .gnb a {
     display: inline-flex;
     text-decoration: none;
     color: white;
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    padding: 0 8px;
 
     span {
       margin: 4px;
@@ -50,7 +66,7 @@
   .lang-sign {
     display: flex;
     justify-content: flex-end;
-
+    width: 30%;
     img {
       display: none;
     }
@@ -66,7 +82,7 @@
       display: inline-flex;
       position: absolute;
       left: -28px;
-      top: 20%;
+      top: 10%;
     }
   }
 
@@ -219,18 +235,26 @@
       color: #0075ff;
       margin-top: 12px;
       margin-bottom: 12px;
+      font-weight: 600;
+      padding: 4px 0;
     }
 
     span {
+      padding: 4px 0;
       margin-bottom: 12px;
     }
 
     a {
-      display: block;
+      display: inline-block;
       color: #000000;
       margin-top: 12px;
       text-decoration: underline;
       text-underline-offset: 7px;
+      padding: 4px 4px 4px 0;
+
+      span {
+        font-weight: 600px;
+      }
     }
   }
 }
