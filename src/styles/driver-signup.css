@@ -6,10 +6,23 @@
   outline: none;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+article.signup-article * {
+  min-width: 0;
+}
+
 article.signup-article {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
+  max-width: 100%;
+  overflow-x: clip;
+
   .article-title {
     box-sizing: border-box;
     max-width: calc(1152px / 2);
@@ -239,9 +252,52 @@ article.signup-article {
         margin-block-end: 2.25rem;
       }
     }
+
+    article.signup-article .article-title {
+      white-space: normal;
+      font-size: clamp(1.75rem, 6vw, 2.25rem);
+    }
+    article.signup-article {
+      overflow-x: clip;
+    }
+
+    .article-title {
+      white-space: normal; /* 긴 제목 줄바꿈 허용 */
+    }
+
+    .driver-signup {
+      max-width: 100%;
+      padding-inline: 0; /* 여백 줄여서 좁은 화면 대응 */
+    }
+
+    .driver-signup .input-field {
+      grid-template-columns: 1fr 1fr; /* 이름/성 두 칸 유지 */
+      column-gap: 0.5rem; /* 간격만 좁게 */
+    }
+
+    .driver-signup .actions {
+      grid-template-columns: 1fr; /* 버튼/로그인 안내는 세로로 */
+      row-gap: 0.75rem;
+    }
+
+    .driver-signup .signin-hint {
+      margin-inline-start: 0;
+      flex-wrap: wrap; /* 줄바꿈 허용 */
+    }
+
+    .driver-signup .terms-note {
+      overflow-wrap: anywhere; /* 긴 문장 자동 줄바꿈 */
+      word-break: keep-all;
+    }
   }
 
   @media (width <= 500px) {
     padding: 2.5rem 1.5rem;
   }
+}
+
+img,
+input,
+button {
+  max-width: 100%; /* 부모 벗어나지 않도록 */
 }
